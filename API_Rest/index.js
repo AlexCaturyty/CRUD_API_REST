@@ -8,6 +8,7 @@ const produtoRoutes = require('./routes/produtoRoutes');
 const pedidoRoutes = require('./routes/pedidoRoutes');
 const clienteRoutes = require('./routes/clienteRoutes');
 const avaliacaoRoutes = require('./routes/avaliacaoRoutes');
+const entregaRoutes = require('./routes/entregaRoutes');
 
 const initOptions = {
 };
@@ -26,6 +27,7 @@ app.use('/produtos', produtoRoutes);
 app.use('/pedidos', pedidoRoutes);
 app.use('/clientes', clienteRoutes);
 app.use('/avaliacoes', avaliacaoRoutes)
+app.use('/entregas', entregaRoutes);
 
 app.get('/', (req, res) => {
     res.json({ info: 'API com CRUD Node.js, Express e ElephantSQL (POSTGRES)' });
