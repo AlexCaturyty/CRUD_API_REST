@@ -48,7 +48,4 @@ class Avaliacao {
 }
 
 module.exports = Avaliacao;
-const express = require('express');
-const router = express.Router();
 
-module.exports = router;
