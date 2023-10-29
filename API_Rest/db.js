@@ -1,8 +1,10 @@
+require('dotenv').config();
+const express = require('express');
 const initOptions = {
     // Configurações adicionais, se necessário
 };
 
-const connectionString = 'postgres://nsojjdfm:bDoPblPyQEmyYxC4w90znSum6LmURQJe@isabelle.db.elephantsql.com/nsojjdfm';
+const connectionString = process.env.DATABASE_URL;
 
 module.exports = {
     connectionString,
