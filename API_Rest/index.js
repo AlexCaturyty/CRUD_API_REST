@@ -34,7 +34,7 @@ app.use('/pagamento', pagamentoRoutes);
 app.use('/carrinho', carrinhoRoutes);
 
 app.get('/', (req, res) => {
-    res.json({ info: 'API com CRUD Node.js, Express e ElephantSQL (POSTGRES)' });
+    res.json({ info: 'API com CRUD Node.js, Express e ElephantSQL (POSTGRES). - Routes: /produto, /pedido, /cliente, /avaliacao, /entrega, /pagamento, /carrinho' });
 });
 
 app.listen(port, () => {
