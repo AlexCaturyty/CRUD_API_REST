@@ -3,19 +3,19 @@ const router = express.Router();
 const categoriaController = require('../controllers/categoriaController');
 
 // Rota para criar uma nova categoria
-router.post('/categorias', categoriaController.criarCategoria);
+router.post('/criar', categoriaController.criarCategoria);
 
 // Rota para listar todas as categorias
-router.get('/categorias', categoriaController.listarCategorias);
+router.get('/', categoriaController.listarCategorias);
 
 // Rota para obter uma categoria por ID
-router.get('/categorias/:id', categoriaController.obterCategoria);
+router.get('/chave/:id', categoriaController.obterCategoria);
 
 // Rota para atualizar uma categoria por ID
-router.put('/categorias/:id', categoriaController.atualizarCategoria);
+router.put('/update/chave/:id', categoriaController.atualizarCategoria);
 
 // Rota para excluir uma categoria por ID
-router.delete('/categorias/:id', categoriaController.excluirCategoria);
+router.delete('/delete/chave/:id', categoriaController.excluirCategoria);
 
 // Rota para obter produtos por categoria
 router.get('/categorias/:id/produtos', categoriaController.obterProdutosPorCategoria);

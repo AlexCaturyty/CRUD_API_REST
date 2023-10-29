@@ -3,7 +3,7 @@ const router = express.Router();
 const avaliacaoController = require('../controllers/avaliacaoController'); // Certifique-se de que o caminho do controller está correto
 
 // Rota para criar uma nova avaliação
-router.post('/', avaliacaoController.criarAvaliacao);
+router.post('/criar', avaliacaoController.criarAvaliacao);
 
 // Rota para listar todas as avaliações
 router.get('/', avaliacaoController.listarAvaliacoes);

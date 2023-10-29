@@ -1,5 +1,15 @@
-# CRUD_API_Rest
+# Sistema de Loja - WebApi
 
-NPM INSTALL
+## Para iniciar a aplicação execute os seguintes comandos no *Terminal* para entrar na pasta do projeto e instalar os pacotes do node
 
-NPM START - RODAR A APLICAÇÃO COM O NODEMON
+`
+cd /API_Rest
+npm install
+`
+
+## Para rodar a aplicação utilize
+
+`
+npm start
+`
+
