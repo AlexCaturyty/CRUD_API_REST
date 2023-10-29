@@ -21,7 +21,6 @@ app.use(
     })
 );
 
-
 app.use('/produtos', produtoRoutes);
 app.use('/pedido', pedidoRoutes);
 app.use('/cliente', clienteRoutes);
