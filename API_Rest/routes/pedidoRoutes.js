@@ -3,7 +3,7 @@ const router = express.Router();
 const pedidoController = require('../controllers/pedidoController');
 
 // Rota para listar todos os pedidos
-router.get('/listarpedidos', pedidoController.listarPedidos);
+router.get('/', pedidoController.listarPedidos);
 
 // Rota para obter um pedido por ID
 router.get('/chave/:id', pedidoController.obterPedido);
