@@ -24,7 +24,25 @@ class Avaliacao {
     ]);
   }
 
-  // Outros métodos específicos de Avaliacao, se necessário
+  // Método para listar todas as avaliações
+  static findAll() {
+    return db.manyOrNone('SELECT * FROM avaliacoes');
+  }
+
+  // Método para obter uma avaliação por ID
+  static findById(id) {
+    return db.oneOrNone('SELECT * FROM avaliacoes WHERE id = $1', [id]);
+  }
+
+  // Método para atualizar uma avaliação
+  static update(id, cliente_id, produto_id, pedido_id, avaliacao, classificacao) {
+    return db.none('UPDATE avaliacoes SET cliente_id = $2, produto_id = $3, pedido_id = $4, avaliacao = $5, classificacao = $6 WHERE id = $1', [id, cliente_id, produto_id, pedido_id, avaliacao, classificacao]);
+  }
+
+  // Método para excluir uma avaliação por ID
+  static delete(id) {
+    return db.none('DELETE FROM avaliacoes WHERE id = $1', [id]);
+  }
 
   // ...
 }
@@ -32,11 +50,5 @@ class Avaliacao {
 module.exports = Avaliacao;
 const express = require('express');
 const router = express.Router();
-const avaliacaoController = require('../controllers/avaliacaoController');
-
-// Rota para criar uma avaliação
-router.post('/avaliacoes', avaliacaoController.criarAvaliacao);
-
-// Outras rotas específicas de Avaliacao, se necessário
 
 module.exports = router;

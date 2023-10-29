@@ -9,10 +9,10 @@ router.get('/', pedidoController.listarPedidos);
 router.get('/chave/:id', pedidoController.obterPedido);
 
 // Rota para atualizar um pedido por ID
-router.put('/chave/update/:id', pedidoController.atualizarPedido);
+router.put('/update/chave/:id', pedidoController.atualizarPedido);
 
 // Rota para excluir um pedido por ID
-router.delete('/chave/delete/:id', pedidoController.excluirPedido);
+router.delete('/delete/chave/:id', pedidoController.excluirPedido);
 
 // Rota para adicionar um produto ao pedido
 router.post('/adicionar-produto/:id/produtos', pedidoController.adicionarProdutoAoPedido);
