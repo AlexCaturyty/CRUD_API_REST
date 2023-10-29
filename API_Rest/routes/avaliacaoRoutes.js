@@ -6,7 +6,7 @@ const avaliacaoController = require('../controllers/avaliacaoController'); // Ce
 router.post('/criar', avaliacaoController.criarAvaliacao);
 
 // Rota para listar todas as avaliações
-router.get('/', avaliacaoController.listarAvaliacoes);
+router.get('/listar', avaliacaoController.listarAvaliacoes);
 
 // Rota para obter uma avaliação por ID
 router.get('/chave/:id', avaliacaoController.obterAvaliacaoPorId);
@@ -15,6 +15,6 @@ router.get('/chave/:id', avaliacaoController.obterAvaliacaoPorId);
 router.put('/update/chave/:id', avaliacaoController.atualizarAvaliacao);
 
 // Rota para excluir uma avaliação por ID
-router.delete('/delete/chave/:id', avaliacaoController.excluirAvaliacao);
+router.delete('/deletar/chave/:id', avaliacaoController.excluirAvaliacao);
 
 module.exports = router;

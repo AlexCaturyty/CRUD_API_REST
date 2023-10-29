@@ -6,15 +6,15 @@ const pagamentoController = require('../controllers/pagamentoController');
 router.post('/criar', pagamentoController.criarPagamento);
 
 // Rota para listar todos os pagamentos
-router.get('/', pagamentoController.listarPagamentos);
+router.get('/listar', pagamentoController.listarPagamentos);
 
 // Rota para obter um pagamento por ID
 router.get('/chave/:id', pagamentoController.obterPagamentoPorId);
 
 // Rota para atualizar um pagamento
-router.put('/update/chave/:id', pagamentoController.atualizarPagamento);
+router.put('/editar/chave/:id', pagamentoController.atualizarPagamento);
 
 // Rota para excluir um pagamento
-router.delete('/delete/chave/:id', pagamentoController.excluirPagamento);
+router.delete('/deletar/chave/:id', pagamentoController.excluirPagamento);
 
 module.exports = router;

@@ -3,16 +3,16 @@ const router = express.Router();
 const pedidoController = require('../controllers/pedidoController');
 
 // Rota para listar todos os pedidos
-router.get('/', pedidoController.listarPedidos);
+router.get('/listar', pedidoController.listarPedidos);
 
 // Rota para obter um pedido por ID
 router.get('/chave/:id', pedidoController.obterPedido);
 
 // Rota para atualizar um pedido por ID
-router.put('/update/chave/:id', pedidoController.atualizarPedido);
+router.put('/editar/chave/:id', pedidoController.atualizarPedido);
 
 // Rota para excluir um pedido por ID
-router.delete('/delete/chave/:id', pedidoController.excluirPedido);
+router.delete('/deletar/chave/:id', pedidoController.excluirPedido);
 
 // Rota para adicionar um produto ao pedido
 router.post('/adicionar-produto/:id/produtos', pedidoController.adicionarProdutoAoPedido);

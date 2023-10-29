@@ -9,15 +9,15 @@ router.get('/:id/pedido', entregaController.obterPedidoDaEntrega);
 router.post('/criar', entregaController.criarEntrega);
 
 // Rota para listar todas as entregas
-router.get('/', entregaController.listarEntregas);
+router.get('/listar', entregaController.listarEntregas);
 
 // Rota para obter uma entrega por ID
 router.get('/chave/:id', entregaController.obterEntregaPorId);
 
 // Rota para atualizar uma entrega
-router.put('/update/chave/:id', entregaController.atualizarEntrega);
+router.put('/editar/chave/:id', entregaController.atualizarEntrega);
 
 // Rota para excluir uma entrega
-router.delete('/delete/chave/:id', entregaController.excluirEntrega);
+router.delete('/deletar/chave/:id', entregaController.excluirEntrega);
 
 module.exports = router;

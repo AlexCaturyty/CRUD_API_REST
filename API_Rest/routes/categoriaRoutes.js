@@ -6,16 +6,16 @@ const categoriaController = require('../controllers/categoriaController');
 router.post('/criar', categoriaController.criarCategoria);
 
 // Rota para listar todas as categorias
-router.get('/', categoriaController.listarCategorias);
+router.get('/listar', categoriaController.listarCategorias);
 
 // Rota para obter uma categoria por ID
 router.get('/chave/:id', categoriaController.obterCategoria);
 
 // Rota para atualizar uma categoria por ID
-router.put('/update/chave/:id', categoriaController.atualizarCategoria);
+router.put('/editar/chave/:id', categoriaController.atualizarCategoria);
 
 // Rota para excluir uma categoria por ID
-router.delete('/delete/chave/:id', categoriaController.excluirCategoria);
+router.delete('/deletar/chave/:id', categoriaController.excluirCategoria);
 
 // Rota para obter produtos por categoria
 router.get('/categorias/:id/produtos', categoriaController.obterProdutosPorCategoria);

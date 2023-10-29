@@ -20,6 +20,25 @@ class Carrinho {
     ]);
   }
 
+  static findAll() {
+    return db.manyOrNone('SELECT * FROM carrinho');
+  }
+
+  static findById(id) {
+    return db.oneOrNone('SELECT * FROM carrinho WHERE id = $1', [id]);
+  }
+
+  static update(id, carrinho) {
+    return db.one(
+      'UPDATE carrinho SET cliente_id=$1, produto_id=$2, quantidade=$3 WHERE id=$4 RETURNING *',
+      [carrinho.cliente_id, carrinho.produto_id, carrinho.quantidade, id]
+    );
+  }
+
+  static delete(id) {
+    return db.none('DELETE FROM carrinho WHERE id=$1', [id]);
+  }
+
   // Outros métodos específicos de Carrinho, se necessário
 
   // ...
