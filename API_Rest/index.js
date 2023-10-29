@@ -22,8 +22,8 @@ app.use(
 );
 
 app.use('/produtos', produtoRoutes);
-app.use('/pedido', pedidoRoutes);
-app.use('/cliente', clienteRoutes);
+app.use('/pedidos', pedidoRoutes);
+app.use('/clientes', clienteRoutes);
 
 app.get('/', (req, res) => {
     res.json({ info: 'API com CRUD Node.js, Express e ElephantSQL (POSTGRES)' });
